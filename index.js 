@@ -46,7 +46,8 @@ app.post('/webhook', async (req, res) => {
       || clawResponse.data?.result
       || '任務已完成';
 
-    console.log(`[${callId}] Result: ${result}`);
+    //console.log(`[${callId}] Result: ${result}`);
+    console.log('Calling:', `${OPENCLAW_URL}/api/v1/message`);
     res.json({ result });
 
   } catch (error) {
